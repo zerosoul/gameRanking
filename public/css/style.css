@@ -1,0 +1,441 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(38, 182, 182, 1);
+    /*background-image: url(../images/ico_888.png);*/
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 75px 38px;
+}
+
+.mainWrap {
+    min-height: 480px;
+    max-width: 640px;
+    margin: 0 auto;
+    background-image: linear-gradient(170deg, rgba(247, 201, 80, 1) 230px, transparent 230px);
+    background-repeat: no-repeat;
+}
+
+.picDdz {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    left: 50%;
+    width: 125px;
+    height: 110px;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.picDdz img {
+    width: 100%;
+}
+
+.top {
+    position: relative;
+    width: 230px;
+    height: 75px;
+    margin: 0 auto;
+    background: url(../images/font_bg.png) center 20px no-repeat;
+    background-size: 100%;
+}
+
+.top li {
+    position: absolute;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.top .font {
+    left: 50%;
+}
+
+.top .font:first-child,
+.top .font:last-child {
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    background-position: 0 bottom;
+    -webkit-transform: translate(80px, 0);
+    -ms-transform: translate(80px, 0);
+    -o-transform: translate(80px, 0);
+    transform: translate(80px, 0);
+}
+
+.top .font:first-child {
+    background-image: url(../images/font_du.png);
+    -webkit-transform: translate(-80px, 0);
+    -ms-transform: translate(-80px, 0);
+    -o-transform: translate(-80px, 0);
+    transform: translate(-80px, 0);
+}
+
+.top .font:last-child {
+    background-image: url(../images/font_ba.png);
+}
+
+.top .font:nth-child(2),
+.top .font:nth-child(4) {
+    top: 36px;
+    width: 34px;
+    height: 33px;
+    margin-left: -17px;
+}
+
+.top .font:nth-child(2) {
+    background-image: url(../images/font_wang.png);
+    -webkit-transform: translate(-40px, 0);
+    -ms-transform: translate(-40px, 0);
+    -o-transform: translate(-40px, 0);
+    transform: translate(-40px, 0);
+}
+
+.top .font:nth-child(4) {
+    background-image: url(../images/font_zheng.png);
+    -webkit-transform: translate(40px, 0);
+    -ms-transform: translate(40px, 0);
+    -o-transform: translate(40px, 0);
+    transform: translate(40px, 0);
+}
+
+.top .picCup {
+    width: 53px;
+    height: 65px;
+    left: 50%;
+    top: 10px;
+    background-image: url(../images/pic_cup.png);
+    margin-left: -27px;
+}
+
+.people {
+    position: relative;
+    margin-top: -10px;
+    height: 100px;
+}
+
+.people > li {
+    position: absolute;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.people > li:first-child {
+    left: 3.125%;
+    top: -30px;
+    width: 93px;
+    height: 106px;
+    background-image: url(../images/pic_p1.png);
+}
+
+.people > li:last-child {
+    top: -10px;
+    right: 3.125%;
+    width: 198px;
+    height: 96px;
+    background-image: url(../images/pic_p2.png);
+}
+
+.heroTit,
+.randTit {
+    width: 78px;
+    height: 26px;
+    margin: 0 auto;
+    background: url(../images/pic_hero.png) center no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.randTit {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background-image: url(../images/pic_rank.png);
+}
+
+.heroSequence {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+.heroItemsBox {
+    text-align: center;
+}
+
+.heroItems {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.heroItems > li {
+    font-size: 14px;
+    color: #f0f0f0;
+    line-height: 24px;
+    text-align: left;
+}
+
+.pic888 {
+    display: block;
+    width: 75px;
+    height: 38px;
+    margin: 15px auto 0 auto;
+}
+
+
+/* sign up.css
+ * -----------------------------------------------------------------*/
+
+.signupBox,
+.wallBox {
+    margin-top: 60px;
+    padding: 0 35px;
+}
+
+.wallBox {
+    margin-top: 30px;
+}
+
+.signupBox h5 {
+    margin: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+}
+
+.field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.fieldText {
+    border: none;
+    width: 100%;
+    height: 40px;
+    padding: 0 0.5rem;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.fieldBtn {
+    height: 35px;
+    text-align: center;
+}
+
+.fieldBtn > button,.fieldBtn > input[type=submit] {
+    height: 100%;
+    border: none;
+    width: 104px;
+    color: #fff;
+    font-size: 14px;
+    background: #ee5d00;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    text-indent: 4px;
+    cursor: pointer;
+}
+
+.fieldTa {
+    width: 100%;
+    border: none;
+    resize: none;
+    height: 110px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* rankBox.css
+ * -----------------------------------------------------------------*/
+
+.rankBox {
+    margin: 0 auto;
+    width: 250px;
+    margin-top: -15px;
+}
+
+.rankItems > li {
+    width: 250px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.rankItems > li .itemGrid {
+    float: left;
+    width: 33.3333333333%;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    color: #333;
+}
+
+.rankItems > li .itemGrid:first-child {
+    border-radius: 5px 0 0 5px;
+    background: #ffde00;
+    color: #414141;
+}
+
+.rankItems > li .itemGrid:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid #d8d8d8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*
+.rankItems > li:nth-child(n+10) .itemGrid:first-child {
+    background: #d8d8d8;
+    color: #333;
+}*/
+
+.rankTxt {
+    /*width: 1.5em;*/
+    display: inline-block;
+    text-align: left;
+}
+.rankItems > li .itemGrid:nth-child(2) .rankTxt {
+    color: #333;
+    /*width: 4em;*/
+}
+
+.rankItems > li .itemGrid:last-child .rankTxt {
+    color: #333;
+    width: 100%;
+    padding-left: 1em;
+}
+input[disabled]{
+    color:#8d8d8d;
+}
+/* admin.css
+ * -----------------------------------------------------------------*/
+.itemTit {
+    margin: 60px 0 0 0;
+}
+.itemTit > li {
+    float: left;
+    width: 33.33333333%;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.adminFields .rankItems > li .itemGrid:first-child {
+    background: #fff;
+    border-right: 1px solid #d8d8d8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.adminFields .rankItems > li .itemGrid:nth-child(2) {
+    line-height: normal;
+}
+.adminFields .rankItems > li .itemGrid:last-child {
+    color: #fff;
+    background: #f5ab00;
+}
+.adminFields .rankItems > li .itemGrid:last-child.out {
+    background: #d8d8d8;
+}
+
+.fieldSelectWrap {
+    color: #444;
+    display: block;
+    height: 40px;
+    width: 100%;
+}
+.fieldSelect {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
+.adminFields .fieldBtn {
+    margin-top: 20px;
+}
+
+/* random.css
+ * -----------------------------------------------------------------*/
+
+.randomBox .rankItems > li .itemGrid:first-child {
+    background: #d8d8d8;
+    background: #fff;
+    border-right: 1px solid #d8d8d8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.randomBox .rankItems > li.randomActive .itemGrid:first-child {
+    background: #f5ab00;
+    color: #ffffff;
+}
+
+.randomBox .rankItems > li.randomVisited .itemGrid:first-child {
+    background: #ffde00;
+    border-right-color: #ffde00;
+    color: #652614;
+}
+
+.rankItemWin .itemGrid:first-child .rankTxt {
+    display: block;
+    width: 25px;
+    height: 40px;
+    margin: 0 auto;
+    background: url(../images/ico_cup_s.png) center no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    font-size: 0;
+    /*height: 30px;*/
+}
+
+
+/* @media.css
+ * -----------------------------------------------------------------*/
+@media screen and (min-width: 641px) {
+    .mainWrap {
+        max-width: 100%;
+        background-image: linear-gradient(170deg, rgba(247, 201, 80, 1) 260px, transparent 260px);
+    }
+    .people > li:first-child {
+        left: 35.25%;
+    }
+    .people > li:last-child {
+        right: 31.25%;
+    }
+}
+
+@media screen and (min-width: 790px) {
+    .rankItems {
+        margin-left: -20px;
+    }
+    .rankItems > li {
+        float: left;
+        margin-left: 5px;
+    }
+    .rankBox {
+        width: 790px;
+    }
+    .rankItems > li .itemGrid {
+        font-size: 16px;
+    }
+
+    .rankItems > li .itemGrid:last-child .rankTxt {
+        padding-left: 0.5em;
+    }
+    
+    .adminFields .rankItems > li {
+        width: 790px;
+    }
+}

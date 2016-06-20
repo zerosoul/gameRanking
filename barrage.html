@@ -1,0 +1,75 @@
+
+<template name="barrage">
+<div class="quote" id="neat">刘国栋 纪兰兰 齐振鹏 陈成功 缪国全 杨晨 赵斌 冯国顺 孙雷 邢文 齐伏龙 康东旭 黄春梅 刘小鲲 杨国春 曹亮 李方舟 金洪生 谭勇林 代总 王立国 曲东杰 杨钊 易坤 陈德文 武总 付军 下半场 向代冰 何鹏 董雨璇 罗志平 何虹玉 赵秋赫 黄总 郭一哲 解飞飞 阮总 卢建立 陈学航 赵忠义 毋总 侯三春 汪锋 程红 周善勇 马成龙 么加明 姚鑫</div>
+<style>
+#rankBox,.picDdz{
+	display: none;
+}
+body,.mainWrap{
+	background: none;
+}
+html {
+  background-color: #0c0a0e;
+  font-family: "Microsoft YaHei", 微软雅黑, Tahoma,Arial,sans-serif;
+  font-size: 2.2vmax;
+  line-height: 1.75em;
+  overflow: hidden;
+}
+
+.quote {
+  cursor: default;
+  color: #00331a;
+  margin: 0 auto 0;
+  max-width: 82vw;
+  -webkit-perspective: 1000vmin;
+          perspective: 1000vmin;
+  width: 33rem;
+}
+
+.quote span {
+  border-radius: 0.3em;
+  display: inline-block;
+  padding: 0 0.25em;
+  margin: 0.1em 0.1em;
+  -webkit-transform: translateZ(-500vmin) rotateX(90deg);
+          transform: translateZ(-500vmin) rotateX(90deg);
+  -webkit-transition: background 2s ease-in, color 5s ease-out, text-shadow 0.5s ease-out, -webkit-transform 15s ease-in;
+          transition: background 2s ease-in, color 5s ease-out, text-shadow 0.5s ease-out, transform 15s ease-in;
+}
+
+.quote .highlight, .quote span:hover {
+  background: rgba(0, 255, 128, 0.1);
+  color: #80ffc0;
+  text-shadow: 0 0 0.6em #00ff80;
+  -webkit-transform: translateZ(0) rotateX(0deg);
+          transform: translateZ(0) rotateX(0deg);
+  -webkit-transform-origin: 50% 100%;
+      -ms-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  z-index: 9001;
+}
+</style>
+
+</template>
+
+
+
+<template name="barrage_input">
+
+    <form class="barrage">
+
+    <div class="signupBox wallBox">
+        <h5>弹幕上墙</h5>
+        <dl class="fields">
+            <dt class="field">
+                <textarea name="msg" class="fieldTa bxzbb" placeholder="两个王！炸死你~~噗哈哈哈哈"></textarea>
+            </dt>
+            <dd class="fieldBtn">
+                <input type="submit" value="吐槽">
+            </dd>
+        </dl>
+    </div>
+        </form>
+</template>

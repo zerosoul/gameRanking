@@ -1,0 +1,197 @@
+/* reset.css
+ * -----------------------------------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li,h1, h2, h3, h4, h5, h6, pre, code,form, fieldset, legend, input, button, textarea, p, blockquote, th,td, header, footer, section, article, aside, nav, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    font: 1em "Microsoft Yahei", "Helvetica";
+    /*font: 1em "Hiragino Sans GB", "Microsoft Yahei", "Helvetica";*/
+    /*Hiragino Sans GB MAC OXS系统中的字体*/
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+img {
+    border: 0;
+    max-width: 100%;
+    /*-webkit-touch-callout: none;*/
+}
+ul, ol {
+    list-style: none;
+}
+
+/* form-reset.css
+ * -----------------------------------------------------------------*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button {
+    background: none;
+}
+a, input, textarea, button, .taphlNone {
+    color: #333;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-hightlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+input, button, textarea, select, optgroup, option {
+    font: 1em "Microsoft Yahei", "Helvetica";
+    outline: none;
+}
+input[type="button"], input[type="text"], input[type="submit"], input[type="search"], input[type="tel"], input[type="number"], select, option, .appNone{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #999;
+}
+input:-moz-placeholder, textarea:-moz-placeholder, input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #999;
+}
+
+.clr:after, .clr:before {
+    display: table;
+    content: "";
+}
+.clr:after {
+    clear: both;
+}
+.fll {
+    float: left;
+}
+.flr {
+    float: right;
+}
+.auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.w100p {
+    width: 100%;
+}
+.h100p{
+    height: 100%;
+}
+.ico {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.bdn {
+    border: none;
+}
+.bdrds0 {
+    border-radius: 0;
+}
+.bxzbb {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.VAM:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.ovh {
+    overflow: hidden;
+}
+.toe {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.colfff {
+    color: #fff;
+}
+.col999 {
+    color: #999
+}
+.col666 {
+    color: #666;
+}
+.col333 {
+    color: #333;
+}
+.colf63 {
+    color: #f63;
+}
+.fz1 {
+    font-size: 1rem;
+}
+.db {
+    display: block;
+}
+.dib {
+    display: inline-block;
+}
+.dtb {
+    display: table;
+}
+.dtbc {
+    display: table-cell;
+}
+.wbwr{
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.vam {
+    vertical-align: middle;
+}
+.vab {
+    vertical-align: bottom;
+} 
+.vat {
+    vertical-align: top;
+}
+.posr {
+    position: relative;
+}
+.posa {
+    position: absolute;
+}
+.tac {
+    text-align: center;
+}
+.tal{
+    text-align: left;
+}
+.tar {
+    text-align: right;
+}
+.fwn {
+    font-weight: normal;
+}
+.fsn {
+    font-style: normal;
+}
+.lhn {
+    line-height: normal;
+}
+.lh1-2 {
+    line-height: 1.2;
+}
+.lh1-5 {
+    line-height: 1.5;
+}
+.body {
+    background: #efeff4;
+    width: 100%;
+    min-width: 320px;
+}
+.rszn {
+    resize: none;
+}

@@ -1,0 +1,47 @@
+<template name="manage">
+
+<div class="rankBox adminFields">
+            <ol class="itemTit clr">
+                <li>姓名</li>
+                <li>积分</li>
+                <li>胜出</li>
+            </ol>
+            <ul class="rankItems clr" id="rank">
+            {{#each gamblers}}
+
+                <li class="clr gambler">
+                    <div class="itemGrid">
+                        <input class="fieldText bxzbb uname" value="{{uname}}"/>
+                        <input type="hidden" value="{{_id}}">
+                    </div>
+                    <div class="itemGrid">
+                        <input type="number" class="fieldText bxzbb chip" value="{{chip}}">
+                    </div>
+                    {{#if isWin}}
+                    <div class="itemGrid win">已胜出</div>
+                    {{else}}
+                    <div class="itemGrid letWin">装X成功</div>
+                    {{/if}}
+                </li>
+
+            {{/each}}
+            </ul>
+            <div class="fieldBtn">
+                <button type="button" id="saveBtn">保存更改</button>
+            </div>
+        </div>
+</template>
+
+
+<template name="gambler_list">
+<select class="fieldSelect gamblerList">
+    {{#each gamblers}}
+        {{#if is_first @index }}
+        <option value="{{_id}}" selected="selected">{{uname}}</option>
+        {{else}}
+        <option value="{{_id}}">{{uname}}</option>
+        {{/if}}
+    {{/each}}
+</select>
+
+</template>

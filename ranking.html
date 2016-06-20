@@ -1,0 +1,28 @@
+<template name="ranking">
+<!-- {{> barrage}} -->
+<div class="rankBox" id="rankBox">
+    <ul class="rankItems clr rubberBand animated" id="rank">
+    {{#each players}}
+        <li class="clr {{#if isWin}}rankItemWin{{/if}}">
+            <div class="itemGrid">
+                <span class="rankTxt">{{#if isWin}}{{else}}第{{groupNum}}组{{/if}}</span> 
+            </div>
+            <div class="itemGrid">
+                <span class="rankTxt">{{uname}}</span> 
+            </div>
+            <div class="itemGrid">
+                <span class="rankTxt">{{chip}}</span> 
+            </div>
+        </li>
+    {{/each}}
+    </ul>
+</div>
+        <section style="position:fixed;bottom:10px;width:100%">
+            <div class="fieldBtn" style="width:50%;float:left;">
+                <button style="background:#94D40A;" class="barrage" type="button">弹幕上墙</button>
+            </div>
+            <div class="fieldBtn">
+                <button class="enroll" type="button">我要当赌王</button>
+            </div>
+        </section>
+</template>

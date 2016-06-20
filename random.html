@@ -1,0 +1,190 @@
+<template name="random">
+<style>
+    .randTit,.picDdz{
+        display: none;
+    }
+</style>
+<div class="fieldBtn" style="margin: 15px;">
+        <button type="button" id="randomBtn">开始分组</button>
+    </div>
+
+    <div class="rankBox randomBox">
+        <ul class="rankItems clr" id="rankBlock">
+            {{#each players}}
+                <li data-id="{{_id}}" class="clr {{#if isWin}}rankItemWin{{/if}}">
+
+                    <div class="itemGrid">
+                        <span class="rankTxt">1</span> 
+                    </div>
+                    <div class="itemGrid">
+                        <span class="rankTxt">{{uname}}</span> 
+                    </div>
+                    <div class="itemGrid">
+                        <span class="rankTxt">{{chip}}</span> 
+                    </div>
+                </li>
+            {{/each}}
+           
+        </ul>
+    </div>
+<div class="fieldBtn" style="margin: 15px;">
+        <button type="button" style="display:none;" id="saveGroup">保存分组</button>
+    </div>
+<script>
+    
+/**
+ *
+ * @author: laoono
+ * @date:  2015-11-16
+ * @time: 14:00
+ * @contact: laoono.com
+ * @description: #
+ */
+
+((function(d) {
+    var btn = d.getElementById("randomBtn");
+    var rank = document.getElementById("rankBlock");
+
+    var t = null;
+    var a = true;
+
+    var li = $(rank).find("li");
+    var len = li.length;
+    var groupNum = Math.ceil(len / 3);
+
+    function rand(lower, upper) {
+
+        var space = upper - lower,
+            r = Math.min(upper, lower);
+        space = Math.abs(space) + 1;
+
+        r = Math.random() * space + r;
+        r = Math.floor(r);
+
+        return r;
+    }
+
+    function getRandom(num) {
+
+        num = num || 1;
+
+        var tmp = [];
+
+        var total = 0;
+
+        for (var i = 0; i < 3; i++) {
+            total = Math.floor(Math.random() * num);
+            tmp[tmp.length] = total;
+        }
+
+        return tmp;
+    }
+
+    function random(num) {
+        num = num || 1;
+
+        var arr = [],
+            len = num;
+
+        for (var i = 0; i < len; ++i) {
+            arr[i] = i;
+        }
+
+
+        var i = rand(0, num - 3);
+
+        arr = arr.sort(function() {
+            return 0.5 - Math.random();
+        });
+
+        return arr.splice(i, 3);
+    }
+
+    function getLi(g) {
+        var tmp = [];
+        var tmp_ = [];
+        var last = null;
+
+        $.each(li, function(i, o) {
+            if (!$(o).hasClass("randomActive")) {
+                tmp.push(o);
+            } else {
+                tmp_.push(o);
+            }
+        });
+
+        last = $(rank).find("li[data-group-num=" + (g - 1) + "]").last();
+
+        $.each(tmp_, function(i, o) {
+            $(o).addClass("randomVisited");
+            $(o).attr("data-group", "visited");
+
+            if (last.length) {
+                $(o).filter("[data-group-num=" + g + "]").insertAfter(last);
+            } else {
+                $(o).filter("[data-group-num=" + g + "]").prependTo(rank);
+            }
+
+            $(o).filter("[data-group-num=" + g + "]").find(".itemGrid:first .rankTxt").text(g);
+        });
+
+        return tmp;
+    }
+
+    var g = 0;
+    btn.onclick = function() {
+        clearInterval(t);
+        
+        if (a == true) {
+            a = false;
+            btn.innerHTML = "暂停分组";
+        } else {
+            clearInterval(t);
+
+            var numLi = $(rank).find(".randomActive").filter("[data-group!='visited']");
+
+            numLi.attr("data-group-num", g);
+            btn.innerHTML = "开始分组";
+
+            a = true;
+            if(g==(groupNum+1)){
+                $("#saveGroup").show();
+            }
+            return;
+        }
+
+        function start(argLi) {
+
+            argLi = argLi || li;
+
+            var len = $(argLi).length;
+
+            if (len === 0) clearInterval(t);
+
+            t = setInterval(function() {
+                $.each(argLi, function(i, o) {
+                    o = $(o);
+                    o.removeClass("randomActive");
+                });
+
+                var index = random(len);
+
+                var index1 = index[0];
+                var index2 = index[1];
+                var index3 = index[2];
+
+                $(argLi).eq(index1).addClass("randomActive");
+                $(argLi).eq(index2).addClass("randomActive");
+                $(argLi).eq(index3).addClass("randomActive");
+            }, 90);
+
+            return t;
+        }
+
+        var randomLi = getLi(g);
+        start(randomLi);
+        g++;
+    };
+})(document));
+</script>
+</template>
