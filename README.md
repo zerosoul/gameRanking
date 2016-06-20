@@ -9,7 +9,7 @@
 - 随机分组（点击**霸**字）
     ![random](/public/images/demo/random.png)
 - 实时展示排行（首页）
-    ![enroll](/public/images/demo/enroll.png)
+    ![index](/public/images/demo/index.png)
 - 后台管理战绩，并实时更新到展示页面（点击**卡通地主**，口令：888888）
     ![pwd](/public/images/demo/pwd.png)
     ![manage](/public/images/demo/manage.png)
@@ -19,3 +19,13 @@
 - [mongo](https://docs.mongodb.com/)
 - [jquery](http://jquery.com/)
 - [animate](http://daneden.github.io/animate.css/)
+
+# 使用方式
+*需要安装meteor*
+- `git clone https://github.com/zerosoul/gameRanking.git`
+- `cd gameRanking`
+- `meteor`
+- 在浏览器打开`localhost:3000`
+
+# 最后
+其实想弄个弹幕，最后时间紧，没搞出来，有空有心情的时候再弄吧。
